@@ -50,7 +50,7 @@ def get_train_time(intent):
     train_times = IrishRailRTPI()
     origin = "Coolmine"
     destination = "Maynooth"
-    data = json.dumps(train_times.get_station_by_name(origin, destination), indent=4, sort_keys=False)
+    data = json.dumps(train_times.get_station(origin, destination), indent=4, sort_keys=False)
     resp = json.loads(data)
     try:
         for i in range(len(resp)):  #len(resp) returns the amount of dictionaries
